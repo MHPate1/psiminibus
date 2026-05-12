@@ -3,21 +3,18 @@ import SEOHead from '../components/SEOHead'
 import MapEmbed from '../components/MapEmbed'
 import { FaPhone, FaEnvelope, FaWhatsapp, FaMapMarkerAlt, FaClock, FaCheckCircle } from 'react-icons/fa'
 import { HERO } from '../config/images'
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, EMAIL } from '../config/contact'
 
 const CONTACT_ITEMS = [
-  { icon: FaPhone,        label: 'Phone',              value: '07738 320506',              href: 'tel:07738320506',                       desc: 'Call us directly — we answer quickly.' },
-  { icon: FaWhatsapp,     label: 'WhatsApp',           value: 'Chat on WhatsApp',          href: 'https://wa.me/447738320506',            desc: 'Message us for an instant quote.', external: true },
-  { icon: FaEnvelope,     label: 'General Enquiries',  value: 'info@psiminibuses.co.uk',   href: 'mailto:info@psiminibuses.co.uk',        desc: 'General enquiries and information.' },
-  { icon: FaEnvelope,     label: 'Bookings & Quotes',  value: 'bookings@psiminibuses.co.uk', href: 'mailto:bookings@psiminibuses.co.uk', desc: 'Book a minibus or request a quote.' },
+  { icon: FaPhone,        label: 'Phone',              value: PHONE_DISPLAY,               href: `tel:${PHONE_TEL}`,                      desc: 'Call us directly — we answer quickly.' },
+  { icon: FaWhatsapp,     label: 'WhatsApp',           value: 'Chat on WhatsApp',          href: WHATSAPP_URL,                            desc: 'Message us for an instant quote.', external: true },
+  { icon: FaEnvelope,     label: 'Email',              value: EMAIL,                       href: `mailto:${EMAIL}`,                       desc: 'General enquiries, bookings and quotes.' },
   { icon: FaMapMarkerAlt, label: 'Address',            value: 'Bolton, Greater Manchester, England', href: null,                          desc: 'Serving Bolton, Greater Manchester & the North West.' },
   { icon: FaClock,        label: 'Availability',       value: '24/7 Service',              href: null,                                    desc: "Early mornings, late nights, weekends — always available." },
 ]
 
 const EMAIL_DEPTS = [
-  { address: 'info@psiminibuses.co.uk',     label: 'General Enquiries' },
-  { address: 'bookings@psiminibuses.co.uk', label: 'Bookings & Quotes' },
-  { address: 'accounts@psiminibuses.co.uk', label: 'Accounts' },
-  { address: 'drivers@psiminibuses.co.uk',  label: 'Drivers / Operations' },
+  { address: EMAIL, label: 'All Enquiries & Bookings' },
 ]
 
 const CONTACT_JSONLD = {
@@ -80,7 +77,7 @@ export default function Contact() {
                 <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">
                   PSI Minibuses and Travels Ltd<br />
                   Bolton, Greater Manchester, England<br />
-                  <a href="tel:07738320506" className="text-[#0D47A1] dark:text-blue-400 hover:underline font-semibold">07738 320506</a>
+                  <a href={`tel:${PHONE_TEL}`} className="text-[#0D47A1] dark:text-blue-400 hover:underline font-semibold">{PHONE_DISPLAY}</a>
                 </p>
                 <p className="text-gray-500 dark:text-slate-500 text-xs mt-2">Covering Bolton, Bury, Wigan, Horwich, Leigh and all of Greater Manchester.</p>
               </address>
@@ -134,7 +131,7 @@ export default function Contact() {
                   The fastest way to get a price for <strong>minibus hire in Bolton</strong> is via WhatsApp.
                   Send us your date, pick-up, destination, and number of passengers.
                 </p>
-                <a href="https://wa.me/447738320506" target="_blank" rel="noopener noreferrer"
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 bg-white text-[#2E7D32] hover:bg-gray-100 font-bold text-sm px-6 py-3.5 rounded transition-colors w-full">
                   <FaWhatsapp size={18} aria-hidden="true" /> Open WhatsApp
                 </a>

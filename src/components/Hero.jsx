@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FaWhatsapp, FaChevronRight } from 'react-icons/fa'
+import { WHATSAPP_URL } from '../config/contact'
 
 export default function Hero() {
   return (
@@ -55,7 +56,7 @@ export default function Hero() {
               Our Services
             </Link>
             <a
-              href="https://wa.me/447738320506"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#1ebe57] text-white font-bold text-base px-8 py-4 rounded transition-colors min-h-[52px] w-full sm:w-auto"

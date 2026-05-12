@@ -1,4 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa'
+import { WHATSAPP_URL } from '../config/contact'
 
 export default function WhatsAppBanner() {
   return (
@@ -17,7 +18,7 @@ export default function WhatsAppBanner() {
             </div>
           </div>
           <a
-            href="https://wa.me/447738320506"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-white text-[#2E7D32] hover:bg-gray-100 font-bold text-base px-8 py-4 rounded transition-colors min-h-[52px] w-full sm:w-auto justify-center flex-shrink-0"

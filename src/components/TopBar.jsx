@@ -1,8 +1,5 @@
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa'
-
-const WHATSAPP_URL = 'https://wa.me/447738320506'
-const PHONE = '07738320506'
-const EMAIL = 'info@psiminibuses.co.uk'
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, EMAIL } from '../config/contact'
 
 export default function TopBar() {
   return (
@@ -12,12 +9,12 @@ export default function TopBar() {
         {/* Contact — full text on sm+, icons only on mobile */}
         <div className="flex items-center gap-4">
           <a
-            href={`tel:${PHONE}`}
+            href={`tel:${PHONE_TEL}`}
             className="flex items-center gap-1.5 hover:text-green-400 transition-colors min-h-[44px]"
             aria-label="Call PSI Minibuses"
           >
             <FaPhone className="text-[#2E7D32] flex-shrink-0" aria-hidden="true" />
-            <span className="hidden sm:inline">07738 320506</span>
+            <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
           </a>
           <a
             href={`mailto:${EMAIL}`}

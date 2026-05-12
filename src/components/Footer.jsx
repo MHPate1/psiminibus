@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaGoogle, FaPhone, FaEnvelope, FaGlobe, FaMapMarkerAlt } from 'react-icons/fa'
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL, EMAIL } from '../config/contact'
 
 const QUICK_LINKS = [
   { label: 'Home', to: '/' },
@@ -45,7 +46,7 @@ export default function Footer() {
                 {[
                   { href: 'https://facebook.com', label: 'PSI Minibuses on Facebook', Icon: FaFacebookF },
                   { href: 'https://instagram.com', label: 'PSI Minibuses on Instagram', Icon: FaInstagram },
-                  { href: 'https://wa.me/447738320506', label: 'Chat with PSI Minibuses on WhatsApp', Icon: FaWhatsapp },
+                  { href: WHATSAPP_URL, label: 'Chat with PSI Minibuses on WhatsApp', Icon: FaWhatsapp },
                   { href: 'https://google.com', label: 'PSI Minibuses on Google', Icon: FaGoogle },
                 ].map(({ href, label, Icon }) => (
                   <a
@@ -96,15 +97,15 @@ export default function Footer() {
             <h2 className="text-white font-bold text-base uppercase tracking-wider mb-5">Contact Us</h2>
             <ul className="space-y-3">
               <li>
-                <a href="tel:07738320506" className="flex items-start gap-3 text-sm text-gray-400 hover:text-[#2E7D32] transition-colors">
+                <a href={`tel:${PHONE_TEL}`} className="flex items-start gap-3 text-sm text-gray-400 hover:text-[#2E7D32] transition-colors">
                   <FaPhone className="text-[#2E7D32] mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  07738 320506
+                  {PHONE_DISPLAY}
                 </a>
               </li>
               <li>
-                <a href="mailto:info@psiminibuses.co.uk" className="flex items-start gap-3 text-sm text-gray-400 hover:text-[#2E7D32] transition-colors break-all">
+                <a href={`mailto:${EMAIL}`} className="flex items-start gap-3 text-sm text-gray-400 hover:text-[#2E7D32] transition-colors break-all">
                   <FaEnvelope className="text-[#2E7D32] mt-0.5 flex-shrink-0" aria-hidden="true" />
-                  info@psiminibuses.co.uk
+                  {EMAIL}
                 </a>
               </li>
               <li>
@@ -130,11 +131,11 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} PSI Minibuses and Travels Ltd. All Rights Reserved.
             <span className="hidden sm:inline"> | Minibus Hire Bolton, Greater Manchester.</span>
           </p>
-          <nav aria-label="Legal links" className="flex items-center gap-4">
-            <Link to="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
-            <span aria-hidden="true">|</span>
-            <Link to="/terms" className="hover:text-gray-300 transition-colors">Terms &amp; Conditions</Link>
-          </nav>
+          <div className="flex items-center gap-4">
+            <span className="text-gray-600 dark:text-slate-600">Privacy Policy</span>
+            <span aria-hidden="true" className="text-gray-600 dark:text-slate-600">|</span>
+            <span className="text-gray-600 dark:text-slate-600">Terms &amp; Conditions</span>
+          </div>
         </div>
       </div>
     </footer>

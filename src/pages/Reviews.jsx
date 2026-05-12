@@ -89,10 +89,9 @@ export default function Reviews() {
 
           <div className="text-center mt-12">
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-              <a href="https://g.page/r/review" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#0D47A1] hover:bg-[#0a3880] text-white font-bold text-sm px-8 py-3.5 rounded transition-colors">
-                <FaGoogle aria-hidden="true" /> Leave a Google Review
-              </a>
+              <span className="inline-flex items-center justify-center gap-2 bg-[#0D47A1]/40 text-blue-200 text-sm px-8 py-3.5 rounded cursor-default select-none" title="Google review link coming soon">
+                <FaGoogle aria-hidden="true" /> Google Review Link Coming Soon
+              </span>
               <Link to="/contact" className="inline-flex items-center justify-center bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-bold text-sm px-8 py-3.5 rounded transition-colors">
                 Book Minibus Hire Bolton
               </Link>
