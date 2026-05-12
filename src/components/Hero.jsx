@@ -1,18 +1,17 @@
 import { Link } from 'react-router-dom'
 import { FaWhatsapp, FaChevronRight } from 'react-icons/fa'
-import { HERO } from '../config/images'
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#263238]"
+      className="relative min-h-[70vh] flex items-start overflow-hidden bg-[#263238]"
       aria-labelledby="hero-heading"
     >
       <div className="absolute inset-0" aria-hidden="true">
         <img
-          src={HERO.home}
+          src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1920&q=80"
           alt=""
-          className="w-full h-full object-cover object-center opacity-30"
+          className="w-full h-full object-cover object-center opacity-40"
           width="1920"
           height="1080"
           fetchpriority="high"
@@ -20,7 +19,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0D47A1]/80 via-[#263238]/70 to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-10 lg:py-14 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 pt-[12vh] pb-10 lg:pt-[14vh] lg:pb-14 w-full">
         <div className="max-w-2xl">
           <p className="inline-block bg-[#2E7D32] text-white text-xs font-bold px-3 py-1.5 rounded uppercase tracking-widest mb-5">
             Minibus Hire Bolton &amp; Greater Manchester

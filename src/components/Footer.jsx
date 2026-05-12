@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <Link to="/" aria-label="PSI Minibuses — Home" className="inline-block mb-4">
               <img
-                src="/logo-white.png"
+                src="/logo-white(2).png"
                 alt="PSI Minibuses and Travels Ltd"
                 className="h-12 w-auto object-contain"
                 width="120"

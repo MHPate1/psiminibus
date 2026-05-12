@@ -41,7 +41,7 @@ export default function Navbar() {
             : 'border-b border-gray-100 dark:border-slate-700'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16 lg:h-20">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-24 lg:h-28">
 
           <Link
             to="/"
@@ -51,16 +51,14 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="PSI Minibuses and Travels Ltd logo"
-              className="block dark:hidden h-11 lg:h-14 w-auto object-contain"
-              width="120"
-              height="56"
+              className="block dark:hidden h-[90px] w-auto object-contain"
+              height="90"
             />
             <img
-              src="/logo-white.png"
+              src="/logo-white(2).png"
               alt="PSI Minibuses and Travels Ltd logo"
-              className="hidden dark:block h-11 lg:h-14 w-auto object-contain"
-              width="120"
-              height="56"
+              className="hidden dark:block h-[90px] w-auto object-contain mix-blend-screen"
+              height="90"
             />
           </Link>
 
@@ -117,7 +115,7 @@ export default function Navbar() {
           id="mobile-nav"
           aria-label="Mobile navigation"
           aria-hidden={!menuOpen}
-          className={`lg:hidden fixed inset-0 top-[88px] bg-white dark:bg-slate-900 z-40 flex flex-col
+          className={`lg:hidden fixed inset-0 top-[136px] bg-white dark:bg-slate-900 z-40 flex flex-col
             transition-all duration-300 ease-in-out
             ${menuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
         >

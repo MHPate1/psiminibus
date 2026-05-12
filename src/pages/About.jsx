@@ -90,7 +90,7 @@ export default function About() {
                     loading="lazy"
                   />
                   <img
-                    src="/logo-white.png"
+                    src="/logo-white(2).png"
                     alt="PSI Minibuses and Travels Ltd — Bolton, Greater Manchester"
                     className="h-20 lg:h-28 w-auto object-contain mx-auto hidden dark:block"
                     width="280"
